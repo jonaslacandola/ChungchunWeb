@@ -3,7 +3,7 @@ body {
     background-color: white !important;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, .offcanvas-body::-webkit-scrollbar {
     display: none;
 }
 
@@ -64,4 +64,3 @@ h2, h1 {
 .home-banner {
     height: 100vh;
 }
-
