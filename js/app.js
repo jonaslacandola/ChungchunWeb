@@ -9,9 +9,13 @@ class product {
 
 const meatloversection = document.querySelector('#meat-lovers')
 
-const MeatProducts = [new product('Chungchun Original', 64, 'A crispy and chewy origina hotdog.', './images/Meat Hotdogs/CHUNGCUN (ORIGINAL).jpg')]
+const MeatProducts = [
+    new product('Chungchun Original', 64, 'A crispy and chewy origina hotdog.', './images/Meat Hotdogs/CHUNGCUN (ORIGINAL).jpg'),
+    new product('  '),
+    new product(' ')
+]
 
-const addProductMeatLover = (product, price, description, image_url) => {
+const addProductMeatLover = (product, price, description, image_url, parent) => {
     const card = document.createElement('div')
     const card_img = document.createElement('img')
     const card_body = document.createElement('div')
@@ -28,7 +32,7 @@ const addProductMeatLover = (product, price, description, image_url) => {
     card_footer_text.innerText = 'P ' + price
     card_button.innerText = 'Add'
 
-    card_button.classList.add('btn', 'btn-outline-dark')
+    card_button.classList.add('btn', 'btn-outline-dark', 'add-btn')
     card_footer_text.classList.add('card-text', 'm-0')
     card_footer.classList.add('card-footer', 'd-flex', 'justify-content-between', 'align-items-center')
     card_text.classList.add('card-text')
@@ -42,10 +46,10 @@ const addProductMeatLover = (product, price, description, image_url) => {
     card_body.append(card_title, card_text)
     card_footer.append(card_footer_text, card_button)
     card.append(card_img, card_body, card_footer)
-    meatloversection.appendChild(card)
+    parent.appendChild(card)
     
 }
 
 MeatProducts.forEach((meatProduct) => {
-    addProductMeatLover(meatProduct.product, meatProduct.price, meatProduct.description, meatProduct.image_url)
+    addProductMeatLover(meatProduct.product, meatProduct.price, meatProduct.description, meatProduct.image_url, meatloversection)
 })
