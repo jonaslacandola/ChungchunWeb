@@ -50,6 +50,14 @@ nav {
     color: #1f1f1f !important;
 }
 
+.menu-navigation {
+    z-index: 3 !important;
+}
+
+.banner-nav.sticky-top {
+    z-index: 1 !important;
+}
+
 .title, .bi-basket {
     font-size: 8em;
     font-weight: 900 !important;
