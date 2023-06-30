@@ -11,8 +11,9 @@ const meatloversection = document.querySelector('#meat-lovers')
 
 const MeatProducts = [
     new product('Chungchun Original', 64, 'A crispy and chewy origina hotdog.', './images/Meat Hotdogs/CHUNGCUN (ORIGINAL).jpg'),
-    new product('  '),
-    new product(' ')
+    new product('Gamsung Potato', 64, 'A hotdog wrapped in crispy fried potatoes.', './images/Meat Hotdogs/GAMSUNG (POTATO).jpg'),
+    new product('Half Mozzarella', 64, 'A crispy hotdog with half mozzarella cheese and half sausage', './images/Meat Hotdogs/HALF MOZZARELLA.jpg'),
+
 ]
 
 const addProductMeatLover = (product, price, description, image_url, parent) => {
@@ -52,4 +53,15 @@ const addProductMeatLover = (product, price, description, image_url, parent) => 
 
 MeatProducts.forEach((meatProduct) => {
     addProductMeatLover(meatProduct.product, meatProduct.price, meatProduct.description, meatProduct.image_url, meatloversection)
+})
+
+const AddBtn = document.querySelectorAll('.add-btn')
+
+AddBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+        const root = e.target.parentElement.parentElement
+        //addtoCart()
+
+        console.log(root)
+    })
 })
