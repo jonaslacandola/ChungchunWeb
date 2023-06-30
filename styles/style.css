@@ -81,3 +81,11 @@ h2, h1 {
 .home-banner {
     height: 100vh;
 }
+
+.main-products .card-title {
+    font-weight: 600 !important;
+}
+
+.main-products .card {
+    margin: 0.5em;
+}
