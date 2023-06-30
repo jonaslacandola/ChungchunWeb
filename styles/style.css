@@ -41,6 +41,15 @@ nav {
     color: #1f1f1f !important;
 }
 
+.nav-tabs .nav-link.active {
+    color: #E63946 !important;
+    font-weight: 600 !important;
+}
+
+.nav-tabs .nav-item a {
+    color: #1f1f1f !important;
+}
+
 .title, .bi-basket {
     font-size: 8em;
     font-weight: 900 !important;
