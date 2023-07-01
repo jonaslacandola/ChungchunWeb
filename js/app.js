@@ -88,7 +88,7 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     card_subtitle.innerText = subtitle
 
     card_subtitle.classList.add('card-subtitle', 'mt-1')
-    card_button.classList.add('btn', 'btn-outline-dark', 'add-btn', 'rounded-5')
+    card_button.classList.add('btn', 'btn-outline-success', 'add-btn', 'rounded-5')
     card_footer_text.classList.add('card-text', 'm-0')
     card_footer.classList.add('card-footer', 'd-flex', 'justify-content-between', 'align-items-center')
     card_text.classList.add('card-text', 'mb-0')
