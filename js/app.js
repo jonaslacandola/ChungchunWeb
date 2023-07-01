@@ -78,13 +78,6 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     const card_subtitle = document.createElement('div')
     
     card_img.src = image_url
-    console.log(card_img.src)
-    if (card_img.src == null) {
-        card_img.classList.add('placeholder')
-    } else if (card_img.src != null && card_img.classList.contains('placeholder')) {
-        card_img.classList.remove('placeholder')
-    }
-
     card_title.innerText = product
     card_text.innerText = description
     card_footer_text.innerText = 'P ' + price

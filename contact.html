@@ -13,28 +13,151 @@
         <title>ChungChun Rice Hotdog</title>
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg border-bottom bg-white">
-        <div class="container-fluid mx-5">
-            <a href="./index.html" class="navbar-brand"><img src="./images/chungchun.png" alt="" style="width: 10em;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-5 fs-6 mb-lg-0">
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="./menu.html" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="./catering.html" class="nav-link">Catering</a></li>
-                    <li class="nav-item"><a href="./contact.html" class="nav-link active">Contact</a></li>
-                    <li class="nav-item"><a href="./location.html" class="nav-link">Locations</a></li>
+        <nav class="navbar navbar-expand-lg border-bottom bg-white sticky-top">
+            <div class="container-fluid mx-5">
+                <a href="./index.html" class="navbar-brand"><img src="./images/chungchun.png" alt="" style="width: 10em;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-5 fs-6 mb-lg-0">
+                        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="./menu.html" class="nav-link">Menu</a></li>
+                        <li class="nav-item"><a href="./catering.html" class="nav-link">Catering</a></li>
+                        <li class="nav-item"><a href="./contact.html" class="nav-link active">Contact</a></li>
+                        <li class="nav-item"><a href="./location.html" class="nav-link">Locations</a></li>
+                    </ul>
+                </div> 
+                <div class="mt-3 d-flex">
+                    <p class="bi bi-facebook fs-2 text-primary px-2"></p>
+                    <p class="bi bi-instagram fs-2 px-2 text-danger"></p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="inquiry-navigation m-2">
+            <nav class="mx-3 rounded-2 bg-body-tertiary d-flex justify-content-end">
+                <ul class="nav nav-tabs" id="navtab" >
+                    <li class="nav-item me-1" role="presentation"><a href="#general-inquiry" class="nav-link active" data-bs-toggle="tab" role="tab" aria-controls="general-inquiry" aria-selected="true">General Inquiry</a></li>
+                    <li class="nav-item me-1" role="presentation"><a href="#franchise-inquiry" class="nav-link" data-bs-toggle="tab" role="tab" aria-controls="franchise-inquiry" aria-selected="true">Franchise Inquiry</a></li>
+                    <li class="nav-item me-1" role="presentation"><a href="#career-inquiry" class="nav-link" data-bs-toggle="tab" role="tab" aria-controls="career-inquiry" aria-selected="true">Career Inquiry</a></li>
                 </ul>
-            </div> 
-            <div class="mt-3 d-flex">
-                <p class="bi bi-facebook fs-2 text-primary px-2"></p>
-                <p class="bi bi-instagram fs-2 px-2 text-danger"></p>
+            </nav>
+
+            <div class="tab-content border mx-3 p-3" id="inquiry-nav-content" style="min-height: 80vh;">
+                <div class="tab-pane fade show active " id="general-inquiry" role="tabpanel" aria-labelledby="general-inquiry">
+                    <div class="ms-5 mt-5 w-100 row">
+                        <form action="" class="col-5">
+                            <div class="form-floating mb-3">
+                                <input type="type" class="form-control" id="floatingName" placeholder="Name" required>
+                                <label for="floatingName">Name</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                                <label for="floatingEmail">Email address</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="type" class="form-control" id="floatingWhat" placeholder="whatsup">
+                                <label for="floatingWhat">What's up</label>
+                            </div>
+
+                            <label for="messagetextarea" class="mx-1 form-label">Message</label>
+                            <textarea id="messagetextarea" rows="3" class="form-control" required></textarea>
+
+                            <button type="submit" class="mt-4 rounded-5 btn btn-outline-success">Submit</button>
+                        </form>
+
+                        <div class="tagline-banner col d-flex flex-column align-items-center">
+                            <h1 class="lh-1 mt-3" style="font-size: 5em !important; font-weight: 900 !important;">Chungchun</h1>
+                            <p class="text-center fs-5 banner-text">We would Love to Hear from You!</p>
+                            <div class="hotdog-products d-flex justify-content-between">
+                                <img src="./images/cheese-bomb-2-po9ypida0h3nuxxfly4s2ytkb7hx7s6w0lw9lsmk52.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="franchise-inquiry" role="tabpanel" aria-labelledby="francise-inquiry">
+                    
+                </div>
+
+                <div class="tab-pane fade" id="career-inquiry" role="tabpanel" aria-labelledby="career-inquiry">
+                    <div class="ms-5 mt-5 w-50">
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input type="type" class="form-control" id="floatingName" placeholder="Name" required>
+                                <label for="floatingName">Name</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                                <label for="floatingEmail">Email address</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="type" class="form-control" id="floatingPhone" placeholder="Name" required>
+                                <label for="floatingPhone">Phone</label>
+                            </div>
+                            
+                            <div class="form-floating mb-2">
+                                <select class="form-select" id="floatingLocation" aria-label="FloatingLocation" required>
+                                  <option selected disabled>Select your prefered location</option>
+                                  <option value="1">PD113 Skyline SM City Clark, Pampanga</option>
+                                  <option value="2">Roque Lane Sunset Estate Friendship Highway, Angeles City, Pampanga</option>
+                                  <option value="3">Brgy. Dolores, San Fernando City, Pampanga</option>
+                                  <option value="4">SM City, Bacolod, 6100 Negros Ocidental</option>
+                                  <option value="5">Unit 1087, Brgy, SM City Santa Rosa, National Road, Santa Rosa, 4026 Laguna</option>
+                                </select>
+                                <label for="floatingLocation">Prefered location</label>
+                              </div>
+                              
+                            <label for="availabilitycontrol" class=" form-label">Availability</label>
+                            <div class="form-availability">
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Monday" id="Monday">
+                                    <label class="form-check-label" for="Monday">Monday</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Tuesday" id="Tuesday">
+                                    <label class="form-check-label" for="Tuesday">Tuesday</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Wednesday" id="Wednesday">
+                                    <label class="form-check-label" for="Wednesday">Wednesday</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Thursday" id="Thursday">
+                                    <label class="form-check-label" for="Thursday">Thursday</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Friday" id="Friday">
+                                    <label class="form-check-label" for="Friday">Friday</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Saturday" id="Saturday">
+                                    <label class="form-check-label" for="Saturday">Saturday</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Sunday" id="Sunday">
+                                    <label class="form-check-label" for="Sunday">Sunday</label>
+                                </div>
+                            </div>
+
+                            <label for="whyjointextarea" class="mx-1 mt-3 form-label">Why do you want to join the Chungchun family?</label>
+                            <textarea id="whyjointextarea" rows="3" class="form-control" required></textarea>
+
+                            <label for="whyjointextarea" class="mx-1 mt-3 form-label">Resume</label>
+                            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+
+                            <button type="submit" class="mt-4 rounded-5 btn btn-outline-success">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
-</body>
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
 </html>
