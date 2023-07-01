@@ -14,6 +14,8 @@ const combosection = document.querySelector('#combos')
 const seasoningssection = document.querySelector('#saucesandseasonings')
 const beveragessection = document.querySelector('#beverages')
 
+const Cart = []
+
 const MeatProducts = [
     new product('Chungchun Original', 64, 'A crispy and chewy original hotdog.', './images/Meat Hotdogs/CHUNGCUN (ORIGINAL).jpg'),
     new product('Gamsung Potato', 84, 'A hotdog wrapped in crispy fried potatoes.', './images/Meat Hotdogs/GAMSUNG (POTATO).jpg'),
@@ -33,7 +35,7 @@ const VeggieProducts = [
     new product('Whole Mozzarella', 74, 'A hotdog with whole mozzarella cheese without sausage.', './images/Vegan Hotdogs/WHOLE MOZZARELLA.jpg'),
     new product('Marble Cheese', 84, 'Full Marble Cheddar Cheese with sticky rice batter.', './images/Vegan Hotdogs/MARBLE CHEESE.jpg'),
     new product('Chocolate', 84, 'A hotdog filled with chocolate without sausage.', './images/Vegan Hotdogs/CHOCOLATE.jpg'),
-    new product('Veggie Hotdog', 94, 'A hotdog with grain meat sausage', './images/Vegan Hotdogs/VEGGIE.jpg')
+    new product('Veggie Hotdog', 94, 'A hotdog with grain meat sausage.', './images/Vegan Hotdogs/VEGGIE.jpg')
 ]
 
 const comboProducts = [
@@ -76,6 +78,7 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     const card_footer_text = document.createElement('p')
     const card_button = document.createElement('button')
     const card_subtitle = document.createElement('div')
+    const card_heart = document.createElement('button')
     
     card_img.src = image_url
     card_title.innerText = product
@@ -88,19 +91,20 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     card_button.classList.add('btn', 'btn-outline-dark', 'add-btn', 'rounded-5')
     card_footer_text.classList.add('card-text', 'm-0')
     card_footer.classList.add('card-footer', 'd-flex', 'justify-content-between', 'align-items-center')
-    card_text.classList.add('card-text')
+    card_text.classList.add('card-text', 'mb-0')
     card_title.classList.add('card-title', 'm-0')
     card_img.classList.add('card-img-top')
     card_body.classList.add('card-body')
-    card.classList.add('card', 'p-0')
+    card.classList.add('card', 'p-0', 'food-card')
+    card_heart.classList.add('bi', 'bi-heart', 'text-danger', 'fav-btn')
 
     card.style.width = '18rem'
 
-    card_body.append(card_title, card_text)
+    card_body.append(card_title ,card_text, card_heart)
     if (subtitle != undefined) {
         card_body.appendChild(card_subtitle)
     }
-    card_footer.append(card_footer_text, card_button)
+    card_footer.append(card_footer_text, card_heart ,card_button)
     card.append(card_img, card_body, card_footer)
     parent.appendChild(card)
     
@@ -150,9 +154,91 @@ const AddBtn = document.querySelectorAll('.add-btn')
 
 AddBtn.forEach(btn => {
     btn.addEventListener('click', e => {
-        const root = e.target.parentElement.parentElement
-        //addtoCart()
+        const rootchildren = e.target.parentElement.parentElement.childNodes
 
-        console.log(root)
+        let product, price, description, img_url, subtitle
+        
+        rootchildren.forEach(child => {
+            if (child.classList.contains('card-img-top')) {
+                img_url = child.getAttribute('src').replace('jpg', 'png')
+            } else if (child.classList.contains('card-body')) {
+                child.childNodes.forEach(child => {
+                    if (child.classList.contains('card-title')) {
+                        product = child.innerText
+                    } else if (child.classList.contains('card-text')) {
+                        description = child.innerText
+                    } else if (child.classList.contains('card-subtitle')) {
+                        subtitle = child.innerText
+                    }
+                })
+            } else if (child.classList.contains('card-footer')) {
+                child.childNodes.forEach(child => {
+                    if (child.classList.contains('card-text')) {
+                        price = parseInt(child.innerText.replace('P', '').trim())
+                    }
+                })
+            }
+        })
+
+        addtoCart(product, price, description, img_url, subtitle)
+    })
+})
+
+const addtoCart = (item, price, desc, img, subt) => {
+    const new_prod = new product(item, price, desc, img, subt)
+
+    Cart.push(new_prod)
+    displaytoCart(new_prod)
+
+}
+
+const displaytoCart = (product) => {
+    const parent = document.querySelector('.offcanvas-items')
+
+    const card = document.createElement('div')
+    const card_info = document.createElement('div')
+    const card_body = document.createElement('div')
+    const card_img = document.createElement('img')
+    const product_title = document.createElement('h5')
+    const description = document.createElement('p')
+    const price = document.createElement('p')
+
+    card.classList.add('card', 'p-0', 'mb-2', 'd-flex', 'flex-row')
+    card_info.classList.add('card-info', 'd-flex', 'flex-column', 'w-100')
+    card_body.classList.add('card-body')
+    card_img.classList.add('me-1')
+    product_title.classList.add('card-title')
+    description.classList.add('class-text')
+    price.classList.add('class-text', 'price')
+
+    card_img.src = product.image_url
+    card_img.style.maxHeight = '8em'
+    card_img.style.minHeight = '6em'
+    card_img.style.objectFit = 'cover'
+
+    product_title.innerText = product.product
+    description.innerText = product.description
+    price.innerText = 'P ' + product.price
+
+    card_body.append(product_title, description, price)
+    card_info.appendChild(card_body)
+    card.append(card_info, card_img)
+
+    parent.appendChild(card)
+
+}
+
+const heart_btn = document.querySelectorAll('.fav-btn')
+            
+heart_btn.forEach(heart => {
+    heart.addEventListener('click', e => {
+        
+        if (heart.classList.contains('bi-heart')) {
+            heart.classList.remove('bi-heart')
+            heart.classList.add('bi-heart-fill')
+        } else {
+            heart.classList.remove('bi-heart-fill')
+            heart.classList.add('bi-heart')
+        }
     })
 })
