@@ -131,3 +131,10 @@ iframe {
     height: 100%;
     width: 100%;
 }
+
+.locate-btn {
+    padding: 0 !important;
+    border: 0 !important;
+    color: #E63946 !important;
+    background-color: transparent !important;
+}
