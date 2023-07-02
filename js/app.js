@@ -44,7 +44,7 @@ const comboProducts = [
 ]
 
 const Sauces = [
-    new product('Ketchup', null, null, '/images/Sauces & Seasonings/KETCHUP.png'),
+    new product('Ketchup', null, null, './images/Sauces & Seasonings/KETCHUP.png'),
     new product('Honey Mustard', null, null, './images/Sauces & Seasonings/HONEY MUSTARD.png'),
     new product('Chipotle', null, null, './images/Sauces & Seasonings/CHIPOTLE.png'),
     new product('BBQ', null, null, './images/Sauces & Seasonings/BBQ.png'),
