@@ -110,3 +110,17 @@ h2, h1 {
     margin-left: 5em;
     font-size: 1.5em;
 }
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:510px;
+    width:770px;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:510px;
+    width:770px;
+}
