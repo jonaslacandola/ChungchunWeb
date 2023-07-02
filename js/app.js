@@ -44,23 +44,23 @@ const comboProducts = [
 ]
 
 const Sauces = [
-    new product('Ketchup', null, null, '/images/Sauces & Seasonings/KETCHUP.PNG'),
-    new product('Honey Mustard', null, null, './images/Sauces & Seasonings/HONEY MUSTARD.PNG'),
-    new product('Chipotle', null, null, './images/Sauces & Seasonings/CHIPOTLE.PNG'),
-    new product('BBQ', null, null, './images/Sauces & Seasonings/BBQ.PNG'),
-    new product('Teriyaki', null, null, './images/Sauces & Seasonings/TERIYAKI.PNG'),
-    new product('Sweet Mayo', null, null, './images/Sauces & Seasonings/SWEET MAYO.PNG'),
-    new product('Wasabi Mayo', null, null, './images/Sauces & Seasonings/WASABI MAYO.PNG'),
-    new product('Spicy Mayo', null, null, './images/Sauces & Seasonings/SPICY MAYO.PNG'),
-    new product('Sweet Chili', null, null, './images/Sauces & Seasonings/SWEET CHILI.PNG'),
-    new product('Hot Sauce', null, null, './images/Sauces & Seasonings/HOT SAUCE.PNG'),
-    new product('Sugar', null, null, './images/Sauces & Seasonings/SUGAR.PNG'),
-    new product('Icing Sugar', null, null, './images/Sauces & Seasonings/ICING SUGAR.PNG'),
-    new product('Cinnamon Sugar', null, null, './images/Sauces & Seasonings/CINNAMON SUGAR.PNG'),
-    new product('Butter Garlic', null, null, './images/Sauces & Seasonings/BUTTER GARLIC.PNG'),
-    new product('Honey Butter', null, null, './images/Sauces & Seasonings/HONEY BUTTER.PNG'),
-    new product('Cheddar Cheese', null, null, './images/Sauces & Seasonings/CHEDDAR CHEESE.PNG'),
-    new product('Parmesan', null, null, './images/Sauces & Seasonings/PARMESAN.PNG')
+    new product('Ketchup', null, null, '/images/Sauces & Seasonings/KETCHUP.png'),
+    new product('Honey Mustard', null, null, './images/Sauces & Seasonings/HONEY MUSTARD.png'),
+    new product('Chipotle', null, null, './images/Sauces & Seasonings/CHIPOTLE.png'),
+    new product('BBQ', null, null, './images/Sauces & Seasonings/BBQ.png'),
+    new product('Teriyaki', null, null, './images/Sauces & Seasonings/TERIYAKI.png'),
+    new product('Sweet Mayo', null, null, './images/Sauces & Seasonings/SWEET MAYO.png'),
+    new product('Wasabi Mayo', null, null, './images/Sauces & Seasonings/WASABI MAYO.png'),
+    new product('Spicy Mayo', null, null, './images/Sauces & Seasonings/SPICY MAYO.png'),
+    new product('Sweet Chili', null, null, './images/Sauces & Seasonings/SWEET CHILI.png'),
+    new product('Hot Sauce', null, null, './images/Sauces & Seasonings/HOT SAUCE.png'),
+    new product('Sugar', null, null, './images/Sauces & Seasonings/SUGAR.png'),
+    new product('Icing Sugar', null, null, './images/Sauces & Seasonings/ICING SUGAR.png'),
+    new product('Cinnamon Sugar', null, null, './images/Sauces & Seasonings/CINNAMON SUGAR.png'),
+    new product('Butter Garlic', null, null, './images/Sauces & Seasonings/BUTTER GARLIC.png'),
+    new product('Honey Butter', null, null, './images/Sauces & Seasonings/HONEY BUTTER.png'),
+    new product('Cheddar Cheese', null, null, './images/Sauces & Seasonings/CHEDDAR CHEESE.png'),
+    new product('Parmesan', null, null, './images/Sauces & Seasonings/PARMESAN.png')
 ]
 
 const beverages = [
