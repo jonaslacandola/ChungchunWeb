@@ -124,3 +124,8 @@ h2, h1 {
     height:510px;
     width:770px;
 }
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
