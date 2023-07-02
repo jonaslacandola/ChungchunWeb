@@ -83,7 +83,9 @@ h2, h1 {
 }
 
 .home-banner {
-    height: 100vh;
+    height: 100%;
+    margin-top: 5em;
+    margin-bottom: 6.5em;
 }
 
 .main-products .card-title {
@@ -114,15 +116,15 @@ h2, h1 {
 .mapouter{
     position:relative;
     text-align:right;
-    height:510px;
-    width:770px;
+    height:80vh;
+    width:55vw;
 }
 
 .gmap_canvas {
     overflow:hidden;
     background:none!important;
-    height:510px;
-    width:770px;
+    height: 100%;
+    width: 100%;
 }
 
 iframe {
