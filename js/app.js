@@ -1,4 +1,4 @@
-class product {
+class Product {
     constructor(product, price, description, image_url, subtitle) {
         this.product = product
         this.price = price
@@ -8,6 +8,18 @@ class product {
     }
 }
 
+class Item {
+    constructor(product, price, qty ,description, image_url, sauce, toppings) {
+        this.product = product
+        this.price = price
+        this.qty = qty
+        this.description = description
+        this.image_url = image_url
+        this.subtitle = subtitle
+        this.sauce = sauce
+        this.toppings = toppings
+    }
+}
 const meatloversection = document.querySelector('#meat-lovers')
 const vegetarianssection = document.querySelector('#vegetarians')
 const combosection = document.querySelector('#combos')
@@ -17,55 +29,55 @@ const beveragessection = document.querySelector('#beverages')
 const Cart = []
 
 const MeatProducts = [
-    new product('Chungchun Original', 64, 'A crispy and chewy original hotdog.', './images/Meat Hotdogs/CHUNGCUN (ORIGINAL).jpg'),
-    new product('Gamsung Potato', 84, 'A hotdog wrapped in crispy fried potatoes.', './images/Meat Hotdogs/GAMSUNG (POTATO).jpg'),
-    new product('Half Mozzarella', 84, 'A crispy hotdog with half mozzarella cheese and half sausage', './images/Meat Hotdogs/HALF MOZZARELLA.jpg'),
-    new product('Ramen Chip', 94, 'A unique crispy fried ramen hotdog.', './images/Meat Hotdogs/RAMEN CHIP.jpg'),
-    new product('Cheddar Cheese', 94, 'A hotdog with sausage wrapped in cheddar cheese.', './images/Meat Hotdogs/CHEDDAR CHEESE.jpg'),
-    new product('Sausage Rice Cake', 94, 'A hotdog with chewy Korean rice cake and sausage.', './images/Meat Hotdogs/SAUSAGE RICE CAKE.jpg'),
-    new product('Jumbo', 94, 'A hotdog with thick premium jumbo sausage.', './images/Meat Hotdogs/JUMBO.jpg'),
-    new product('Double Cheese', 114, 'A hotdog with mozzarella and cheddar cheese.', './images/Meat Hotdogs/DOUBLE CHEESE.jpg'),
-    new product('Squid Ink Cheese', 114, 'A hotdog made with squid ink batter with cheese and sausage inside.', './images/Meat Hotdogs/SQUID INK CHEESE.jpg'),
-    new product('Sweet Potato', 94, 'Rice hotdog wrapped in crispy fried Sweet Potatoes (Beef & Chicken Mixed).', './images/Meat Hotdogs/SWEET POTATO.jpg'),
-    new product('Volcano', 94, 'A hotdog made with spicy jalapeno sausage.', './images/Meat Hotdogs/VOLCANO.jpg'),
-    new product('Chicken Nugget Hotdog', 124, 'A hotdog coated with a crispy chicken nugget.', './images/Meat Hotdogs/CHICKEN NUGGET.jpg')
+    new Product('Chungchun Original', 64, 'A crispy and chewy original hotdog.', './images/Meat Hotdogs/CHUNGCUN (ORIGINAL).jpg'),
+    new Product('Gamsung Potato', 84, 'A hotdog wrapped in crispy fried potatoes.', './images/Meat Hotdogs/GAMSUNG (POTATO).jpg'),
+    new Product('Half Mozzarella', 84, 'A crispy hotdog with half mozzarella cheese and half sausage', './images/Meat Hotdogs/HALF MOZZARELLA.jpg'),
+    new Product('Ramen Chip', 94, 'A unique crispy fried ramen hotdog.', './images/Meat Hotdogs/RAMEN CHIP.jpg'),
+    new Product('Cheddar Cheese', 94, 'A hotdog with sausage wrapped in cheddar cheese.', './images/Meat Hotdogs/CHEDDAR CHEESE.jpg'),
+    new Product('Sausage Rice Cake', 94, 'A hotdog with chewy Korean rice cake and sausage.', './images/Meat Hotdogs/SAUSAGE RICE CAKE.jpg'),
+    new Product('Jumbo', 94, 'A hotdog with thick premium jumbo sausage.', './images/Meat Hotdogs/JUMBO.jpg'),
+    new Product('Double Cheese', 114, 'A hotdog with mozzarella and cheddar cheese.', './images/Meat Hotdogs/DOUBLE CHEESE.jpg'),
+    new Product('Squid Ink Cheese', 114, 'A hotdog made with squid ink batter with cheese and sausage inside.', './images/Meat Hotdogs/SQUID INK CHEESE.jpg'),
+    new Product('Sweet Potato', 94, 'Rice hotdog wrapped in crispy fried Sweet Potatoes (Beef & Chicken Mixed).', './images/Meat Hotdogs/SWEET POTATO.jpg'),
+    new Product('Volcano', 94, 'A hotdog made with spicy jalapeno sausage.', './images/Meat Hotdogs/VOLCANO.jpg'),
+    new Product('Chicken Nugget Hotdog', 124, 'A hotdog coated with a crispy chicken nugget.', './images/Meat Hotdogs/CHICKEN NUGGET.jpg')
 ]
 
 const VeggieProducts = [
-    new product('Whole Mozzarella', 74, 'A hotdog with whole mozzarella cheese without sausage.', './images/Vegan Hotdogs/WHOLE MOZZARELLA.jpg'),
-    new product('Marble Cheese', 84, 'Full Marble Cheddar Cheese with sticky rice batter.', './images/Vegan Hotdogs/MARBLE CHEESE.jpg'),
-    new product('Chocolate', 84, 'A hotdog filled with chocolate without sausage.', './images/Vegan Hotdogs/CHOCOLATE.jpg'),
-    new product('Veggie Hotdog', 94, 'A hotdog with grain meat sausage.', './images/Vegan Hotdogs/VEGGIE.jpg')
+    new Product('Whole Mozzarella', 74, 'A hotdog with whole mozzarella cheese without sausage.', './images/Vegan Hotdogs/WHOLE MOZZARELLA.jpg'),
+    new Product('Marble Cheese', 84, 'Full Marble Cheddar Cheese with sticky rice batter.', './images/Vegan Hotdogs/MARBLE CHEESE.jpg'),
+    new Product('Chocolate', 84, 'A hotdog filled with chocolate without sausage.', './images/Vegan Hotdogs/CHOCOLATE.jpg'),
+    new Product('Veggie Hotdog', 94, 'A hotdog with grain meat sausage.', './images/Vegan Hotdogs/VEGGIE.jpg')
 ]
 
 const comboProducts = [
-    new product('Chungchun Combo', 350, 'Gamsung Potato Hotdog, Ramen Chip Hotdog, Squid Ink Cheese Hotdog, Sweet Potato Hotdog (This combo contains Beef and Chicken)', './images/cheese-bomb-2-po9ypida0h3nuxxfly4s2ytkb7hx7s6w0lw9lsmk52.png', 'Chungchun fan\'s Favorite Pick!'),
-    new product('Cheese Bomb Combo', 320, 'Whole Mozzarella, Double Cheese Hotdog, Marble Cheese, Cheddar Cheese Hotdog (This combo contains Beef and Chicken)', './images/cheese-bomb-po9xy2gwhljawrseul3vse43z8r5hw8zws8y7zbbsm.png', 'Combo for Cheese Lovers!')
+    new Product('Chungchun Combo', 350, 'Gamsung Potato Hotdog, Ramen Chip Hotdog, Squid Ink Cheese Hotdog, Sweet Potato Hotdog (This combo contains Beef and Chicken)', './images/cheese-bomb-2-po9ypida0h3nuxxfly4s2ytkb7hx7s6w0lw9lsmk52.png', 'Chungchun fan\'s Favorite Pick!'),
+    new Product('Cheese Bomb Combo', 320, 'Whole Mozzarella, Double Cheese Hotdog, Marble Cheese, Cheddar Cheese Hotdog (This combo contains Beef and Chicken)', './images/cheese-bomb-po9xy2gwhljawrseul3vse43z8r5hw8zws8y7zbbsm.png', 'Combo for Cheese Lovers!')
 ]
 
 const Sauces = [
-    new product('Ketchup', null, null, './images/Sauces & Seasonings/KETCHUP.png'),
-    new product('Honey Mustard', null, null, './images/Sauces & Seasonings/HONEY MUSTARD.png'),
-    new product('Chipotle', null, null, './images/Sauces & Seasonings/CHIPOTLE.png'),
-    new product('BBQ', null, null, './images/Sauces & Seasonings/BBQ.png'),
-    new product('Teriyaki', null, null, './images/Sauces & Seasonings/TERIYAKI.png'),
-    new product('Sweet Mayo', null, null, './images/Sauces & Seasonings/SWEET MAYO.png'),
-    new product('Wasabi Mayo', null, null, './images/Sauces & Seasonings/WASABI MAYO.png'),
-    new product('Spicy Mayo', null, null, './images/Sauces & Seasonings/SPICY MAYO.png'),
-    new product('Sweet Chili', null, null, './images/Sauces & Seasonings/SWEET CHILI.png'),
-    new product('Hot Sauce', null, null, './images/Sauces & Seasonings/HOT SAUCE.png'),
-    new product('Sugar', null, null, './images/Sauces & Seasonings/SUGAR.png'),
-    new product('Icing Sugar', null, null, './images/Sauces & Seasonings/ICING SUGAR.png'),
-    new product('Cinnamon Sugar', null, null, './images/Sauces & Seasonings/CINNAMON SUGAR.png'),
-    new product('Butter Garlic', null, null, './images/Sauces & Seasonings/BUTTER GARLIC.png'),
-    new product('Honey Butter', null, null, './images/Sauces & Seasonings/HONEY BUTTER.png'),
-    new product('Cheddar Cheese', null, null, './images/Sauces & Seasonings/CHEDDAR CHEESE.png'),
-    new product('Parmesan', null, null, './images/Sauces & Seasonings/PARMESAN.png')
+    new Product('Ketchup', null, null, './images/Sauces & Seasonings/KETCHUP.png'),
+    new Product('Honey Mustard', null, null, './images/Sauces & Seasonings/HONEY MUSTARD.png'),
+    new Product('Chipotle', null, null, './images/Sauces & Seasonings/CHIPOTLE.png'),
+    new Product('BBQ', null, null, './images/Sauces & Seasonings/BBQ.png'),
+    new Product('Teriyaki', null, null, './images/Sauces & Seasonings/TERIYAKI.png'),
+    new Product('Sweet Mayo', null, null, './images/Sauces & Seasonings/SWEET MAYO.png'),
+    new Product('Wasabi Mayo', null, null, './images/Sauces & Seasonings/WASABI MAYO.png'),
+    new Product('Spicy Mayo', null, null, './images/Sauces & Seasonings/SPICY MAYO.png'),
+    new Product('Sweet Chili', null, null, './images/Sauces & Seasonings/SWEET CHILI.png'),
+    new Product('Hot Sauce', null, null, './images/Sauces & Seasonings/HOT SAUCE.png'),
+    new Product('Sugar', null, null, './images/Sauces & Seasonings/SUGAR.png'),
+    new Product('Icing Sugar', null, null, './images/Sauces & Seasonings/ICING SUGAR.png'),
+    new Product('Cinnamon Sugar', null, null, './images/Sauces & Seasonings/CINNAMON SUGAR.png'),
+    new Product('Butter Garlic', null, null, './images/Sauces & Seasonings/BUTTER GARLIC.png'),
+    new Product('Honey Butter', null, null, './images/Sauces & Seasonings/HONEY BUTTER.png'),
+    new Product('Cheddar Cheese', null, null, './images/Sauces & Seasonings/CHEDDAR CHEESE.png'),
+    new Product('Parmesan', null, null, './images/Sauces & Seasonings/PARMESAN.png')
 ]
 
 const beverages = [
-    new product('House Coffee', 60, 'House blend brewed ice coffee.', './images/Beverages/HOUSE COFFEE.png'),
-    new product('Pineapple Ade', 60, 'Freshly made pineapple juice.', './images/Beverages/PINEAPPLE ADE.png')
+    new Product('House Coffee', 60, 'House blend brewed ice coffee.', './images/Beverages/HOUSE COFFEE.png'),
+    new Product('Pineapple Ade', 60, 'Freshly made pineapple juice.', './images/Beverages/PINEAPPLE ADE.png')
 ]
 
 const addProduct = (product, price, description, image_url, parent, subtitle) => {
@@ -86,7 +98,7 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     card_footer_text.innerText = 'P ' + price
     card_button.innerText = 'Add'
     card_subtitle.innerText = subtitle
-
+    
     card_subtitle.classList.add('card-subtitle', 'mt-1')
     card_button.classList.add('btn', 'btn-outline-success', 'add-btn', 'rounded-5')
     card_footer_text.classList.add('card-text', 'm-0')
@@ -99,6 +111,8 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     card_heart.classList.add('bi', 'bi-heart', 'text-danger', 'fav-btn')
 
     card.style.width = '18rem'
+    card_button.setAttribute('data-bs-target', '#addtocardmodal')
+    card_button.setAttribute('data-bs-toggle', 'modal')
 
     card_body.append(card_title ,card_text, card_heart)
     if (subtitle != undefined) {
@@ -151,6 +165,17 @@ beverages.forEach(drink => {
 })
 
 const AddBtn = document.querySelectorAll('.add-btn')
+const cartbtn = document.querySelector('#cartbtn')
+
+cartbtn.addEventListener('mouseover', () => {
+    cartbtn.classList.remove('bi-cart-check')
+    cartbtn.classList.add('bi-cart-check-fill')
+})
+
+cartbtn.addEventListener('mouseout', () => {
+    cartbtn.classList.remove('bi-cart-check-fill')
+    cartbtn.classList.add('bi-cart-check')
+})
 
 AddBtn.forEach(btn => {
     btn.addEventListener('click', e => {
@@ -179,22 +204,57 @@ AddBtn.forEach(btn => {
                 })
             }
         })
-
-        addtoCart(product, price, description, img_url, subtitle)
+        //Display product to modal
+        displaytoModal(product, price, description, img_url, subtitle)
+        
     })
 })
 
-const addtoCart = (item, price, desc, img, subt) => {
-    const new_prod = new product(item, price, desc, img, subt)
+const displaytoModal = (product, price, desc, img, subt) => {
+    const modalheader = document.querySelector('.modal-header')
+    const modaltitle = document.querySelector('.modal-title')
+    const modaldescription = document.querySelector('.modal-description')
+    
+    const product_img = document.createElement('img')
+    const product_title = document.createElement('h5')
+    const product_desc = document.createElement('p')
+    const product_price = document.createElement('p')
+    
+    modaltitle.innerHTML = ''
+    modalheader.innerHTML = ''
+    modaldescription.innerHTML = ''
 
-    Cart.push(new_prod)
-    displaytoCart(new_prod)
+    product_title.innerText = product
+    product_desc.innerText = desc
+    product_price.innerText = 'P ' + price
 
+    product_img.src = img
+    product_img.style.height = '12em'
+    product_img.style.objectFit = 'cover'
+    product_price.style.fontWeight = '500'
+
+    product_img.classList.add('rounded-3')
+    product_title.classList.add('modal-title', 'mt-2', 'mb-3')
+    product_desc.classList.add('modal-text', 'mb-2')
+    product_price.classList.add('modal-text', 'mb-2', 'modal-price')
+    modalheader.classList.add('d-flex', 'justify-content-center')
+
+    modalheader.append(product_img)
+    modaltitle.append(product_title)
+    modaldescription.append(product_desc, product_price)
+
+    document.querySelectorAll('.topping').forEach(topping => {
+        topping.checked = false
+        topping.disabled = false
+    })
+
+    document.querySelectorAll('.sauce').forEach(sauce => {
+        sauce.checked = false
+        sauce.disabled = false
+    })
 }
 
-const displaytoCart = (product) => {
-    const parent = document.querySelector('.offcanvas-items')
-
+const displayProduct = (product, parent) => {
     const card = document.createElement('div')
     const card_info = document.createElement('div')
     const card_body = document.createElement('div')
@@ -225,8 +285,52 @@ const displaytoCart = (product) => {
     card.append(card_info, card_img)
 
     parent.appendChild(card)
-
 }
+
+document.querySelectorAll('.topping').forEach(topping => {
+    topping.addEventListener('change', () => {
+        document.querySelectorAll('.topping').forEach(currentTopping => {
+            if (currentTopping !== topping) {
+                currentTopping.disabled = topping.checked
+            }
+        })
+    })
+})
+
+document.querySelector('#NoSauce').addEventListener('change', () => {
+    document.querySelectorAll('.sauce').forEach(sauce => {
+        if (sauce !== document.querySelector('#NoSauce')) {
+            sauce.disabled = document.querySelector('#NoSauce').checked
+        }
+    })
+})
+
+cartbtn.addEventListener('click', e => {
+    const rootParent = e.target.parentElement.parentElement
+
+    const product = rootParent.querySelector('.modal-title').innerText
+    const image = rootParent.querySelector('.modal-header img').getAttribute('src')
+    const price = parseInt(rootParent.querySelector('.modal-price').innerText.replace('P', '').trim())
+    const description = rootParent.querySelector('.modal-text').innerText
+    const toppings = []
+    const sauces = []
+
+    rootParent.querySelectorAll('.topping').forEach(topping => {
+        if (topping.checked) {
+            toppings.push(topping.value)
+        }
+    })
+
+    rootParent.querySelectorAll('.sauce').forEach(sauce => {
+        if (sauce.checked) {
+            sauces.push(sauce.value)
+            console.log(sauces)
+        }
+    })
+
+    displayProduct(new Product(product, price, description, image), document.querySelector('.offcanvas-items'))
+    Cart.push(new Item(product, price, null, description, image, sauces, toppings))
+})
 
 const heart_btn = document.querySelectorAll('.fav-btn')
             

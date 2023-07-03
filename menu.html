@@ -13,6 +13,82 @@
         <title>Chungchun Rice Hotdog</title>
     </head>
     <body>
+
+        <div class="modal fade" id="addtocardmodal" aria-labelledby="addtocardmodal" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header"></div>
+                    <div class="modal-body bg-body-tertiary p-1 px-3">
+                        <div class="modal-title"></div>
+                        <div class="modal-description mb-3"></div>
+                        <div class="modal-comtent">
+                            <p class="modal-title fw-bold">Add Toppings</p>
+                            <div class="toppings ps-3 mt-2 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input topping" type="checkbox" value="Potatoes">
+                                    <label class="form-check-label" for="formcheck"> Potatoes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input topping" type="checkbox" value="Ramen">
+                                    <label class="form-check-label" for="formcheck"> Ramen</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input topping" type="checkbox" value="Flakes">
+                                    <label class="form-check-label" for="formcheck"> Flakes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input topping" type="checkbox" value="Sweet Potato">
+                                    <label class="form-check-label" for="formcheck"> Sweet Potato</label>
+                                </div>
+                            </div>
+                            <p class="modal-title fw-bold">Choose your sauce</p>
+                            <div class="sauces ps-3 mt-2 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="No Sauce" id="NoSauce">
+                                    <label class="form-check-label" for="formcheck"> No Sauce</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="2 Ketchup + 1 Mustard">
+                                    <label class="form-check-label" for="formcheck"> 2 Ketchup + 1 Mustard</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="Sweet Mayo">
+                                    <label class="form-check-label" for="formcheck"> Sweet Mayo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="Sweet Chili">
+                                    <label class="form-check-label" for="formcheck"> Sweet Chili</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="BBQ">
+                                    <label class="form-check-label" for="formcheck"> BBQ</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="Chipotle">
+                                    <label class="form-check-label" for="formcheck"> Chipotle</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="Honey Mustard">
+                                    <label class="form-check-label" for="formcheck"> Honey Mustard</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="Hot Sauce">
+                                    <label class="form-check-label" for="formcheck"> Hot Sauce</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input sauce" type="checkbox" value="Teriyaki">
+                                    <label class="form-check-label" for="formcheck"> Teriyaki</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer p-2 pt-0 pe-4">
+                        <button id="cartbtn" class="addtocartbtn bi bi-cart-check bg-body text-success border-0 fs-2" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <nav class="navbar navbar-expand-lg menu-navigation">
             <div class="container-fluid mx-5">
                 <a href="./index.html" class="navbar-brand"><img src="./images/chungchun.png" alt="" style="width: 10em;"></a>
