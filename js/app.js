@@ -168,13 +168,13 @@ const AddBtn = document.querySelectorAll('.add-btn')
 const cartbtn = document.querySelector('#cartbtn')
 
 cartbtn.addEventListener('mouseover', () => {
-    cartbtn.classList.remove('bi-cart-check')
+    cartbtn.classList.remove('bi-cart')
     cartbtn.classList.add('bi-cart-check-fill')
 })
 
 cartbtn.addEventListener('mouseout', () => {
     cartbtn.classList.remove('bi-cart-check-fill')
-    cartbtn.classList.add('bi-cart-check')
+    cartbtn.classList.add('bi-cart')
 })
 
 AddBtn.forEach(btn => {
