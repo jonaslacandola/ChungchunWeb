@@ -110,7 +110,7 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     card.classList.add('card', 'p-0', 'food-card')
     card_heart.classList.add('bi', 'bi-heart', 'text-danger', 'fav-btn')
 
-    card.style.width = '18rem'
+    card.style.width = '18.5rem'
     card_button.setAttribute('data-bs-target', '#addtocardmodal')
     card_button.setAttribute('data-bs-toggle', 'modal')
 
