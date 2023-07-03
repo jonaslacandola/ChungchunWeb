@@ -231,6 +231,7 @@ const displaytoModal = (product, price, desc, img, subt) => {
     product_desc.innerText = desc
     product_price.innerText = 'P ' + price
 
+    product_img.src = img
     product_img.style.objectFit = 'cover'
     product_price.style.fontWeight = '500'
 
@@ -245,14 +246,11 @@ const displaytoModal = (product, price, desc, img, subt) => {
     modaldescription.append(product_desc, product_price)
 
     if (product == 'Pineapple Ade' || product == 'House Coffee') {
-        product_img.src = img
         modalcontent.style.display = 'none'
     } else if (product == 'Chungchun Combo' || product == 'Cheese Bomb Combo') {
-        product_img.src = img
         modalcontent.style.display = 'block'
         topping.style.display = 'none'
     } else {
-        product_img.src = img.replace('png', 'jpg')
         modalcontent.style.display = 'block'
         topping.style.display = 'block'
     }
