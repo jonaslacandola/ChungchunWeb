@@ -139,3 +139,7 @@ iframe {
     color: #E63946 !important;
     background-color: transparent !important;
 }
+
+.soc-med {
+    cursor: pointer;
+}
