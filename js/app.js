@@ -230,7 +230,7 @@ const displaytoModal = (product, price, desc, img, subt) => {
     product_title.innerText = product
     product_desc.innerText = desc
     product_price.innerText = 'P ' + price
-    
+
     product_img.style.objectFit = 'cover'
     product_price.style.fontWeight = '500'
 
@@ -285,7 +285,7 @@ const displayProduct = (product, parent) => {
     description.classList.add('class-text')
     price.classList.add('class-text', 'price')
 
-    card_img.src = product.image_url
+    card_img.src = product.image_url.replace('jpg', 'png')
     card_img.style.maxHeight = '8em'
     card_img.style.minHeight = '6em'
     card_img.style.objectFit = 'cover'
