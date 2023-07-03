@@ -95,7 +95,7 @@ const addProduct = (product, price, description, image_url, parent, subtitle) =>
     card_img.src = image_url
     card_title.innerText = product
     card_text.innerText = description
-    card_footer_text.innerText = 'P ' + price
+    card_footer_text.innerText = '₱ ' + price
     card_button.innerText = 'Add'
     card_subtitle.innerText = subtitle
     
@@ -199,7 +199,7 @@ AddBtn.forEach(btn => {
             } else if (child.classList.contains('card-footer')) {
                 child.childNodes.forEach(child => {
                     if (child.classList.contains('card-text')) {
-                        price = parseInt(child.innerText.replace('P', '').trim())
+                        price = parseInt(child.innerText.replace('₱', '').trim())
                     }
                 })
             }
@@ -229,7 +229,7 @@ const displaytoModal = (product, price, desc, img, subt) => {
 
     product_title.innerText = product
     product_desc.innerText = desc
-    product_price.innerText = 'P ' + price
+    product_price.innerText = '₱ ' + price
 
     product_img.src = img
     product_img.style.objectFit = 'cover'
@@ -290,7 +290,7 @@ const displayProduct = (product, parent) => {
 
     product_title.innerText = product.product
     description.innerText = product.description
-    price.innerText = 'P ' + product.price
+    price.innerText = '₱ ' + product.price
 
     card_body.append(product_title, description, price)
     card_info.appendChild(card_body)
@@ -322,7 +322,7 @@ cartbtn.addEventListener('click', e => {
 
     const product = rootParent.querySelector('.modal-title').innerText
     const image = rootParent.querySelector('.modal-header img').getAttribute('src')
-    const price = parseInt(rootParent.querySelector('.modal-price').innerText.replace('P', '').trim())
+    const price = parseInt(rootParent.querySelector('.modal-price').innerText.replace('₱', '').trim())
     const description = rootParent.querySelector('.modal-text').innerText
     const toppings = []
     const sauces = []
