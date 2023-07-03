@@ -35,6 +35,7 @@ a {
 .nav-link.active {
     color: #E63946 !important;
     font-weight: 600 !important;
+   
 }
 
 .nav-pills a{

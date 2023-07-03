@@ -214,6 +214,8 @@ const displaytoModal = (product, price, desc, img, subt) => {
     const modalheader = document.querySelector('.modal-header')
     const modaltitle = document.querySelector('.modal-title')
     const modaldescription = document.querySelector('.modal-description')
+    const modalcontent = document.querySelector('.form')
+    const topping = document.querySelector('.toppings')
     
     const product_img = document.createElement('img')
     const product_title = document.createElement('h5')
@@ -223,13 +225,12 @@ const displaytoModal = (product, price, desc, img, subt) => {
     modaltitle.innerHTML = ''
     modalheader.innerHTML = ''
     modaldescription.innerHTML = ''
+    modalheader.style.height = '15em'
 
     product_title.innerText = product
     product_desc.innerText = desc
     product_price.innerText = 'P ' + price
-
-    product_img.src = img
-    product_img.style.height = '12em'
+    
     product_img.style.objectFit = 'cover'
     product_price.style.fontWeight = '500'
 
@@ -242,6 +243,19 @@ const displaytoModal = (product, price, desc, img, subt) => {
     modalheader.append(product_img)
     modaltitle.append(product_title)
     modaldescription.append(product_desc, product_price)
+
+    if (product == 'Pineapple Ade' || product == 'House Coffee') {
+        product_img.src = img
+        modalcontent.style.display = 'none'
+    } else if (product == 'Chungchun Combo' || product == 'Cheese Bomb Combo') {
+        product_img.src = img
+        modalcontent.style.display = 'block'
+        topping.style.display = 'none'
+    } else {
+        product_img.src = img.replace('png', 'jpg')
+        modalcontent.style.display = 'block'
+        topping.style.display = 'block'
+    }
 
     document.querySelectorAll('.topping').forEach(topping => {
         topping.checked = false
