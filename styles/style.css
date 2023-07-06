@@ -143,3 +143,123 @@ iframe {
 .soc-med {
     cursor: pointer;
 }
+
+@media screen and (max-width: 992px) {
+    .soc-med, .bi-facebook, .bi-instagram {
+        display: none;
+    }
+
+    .home-banner {
+        height: 10vh !important;
+    }
+
+    .home-banner .images {
+        display: none;
+    }
+
+    #header-banner {
+        font-size: 8px;
+    }
+
+    #header-banner .fs-3 {
+        font-size: 15px !important;
+    }
+
+    .main-content.p-5 {
+        padding: 0 !important;
+        padding-top: 10px !important;
+    }
+
+    .main-content .nav-link {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+
+    #index-scrollspy {
+        padding: 1.5em !important;
+    }
+
+    /*Menu Styles*/
+    .menu-navigation {
+        background-color: white;
+    }
+
+    .menu-navigation .container-fluid.mx-5{
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    #menu-header-banner {
+        display: none !important;
+    }
+
+    .main-menu-items .nav-link {
+        padding: 5px 15px!important;
+        font-size: 14px;
+    }
+
+    #main-menu-navigation {
+        top: 6em !important;
+    }
+
+    /*Location Style*/
+
+    /*Contact Style */
+    .inquiry-navigation {
+        font-size: 14px;
+    }
+
+    .inquiry-navigation .nav-link {
+        padding: 6px 15px;
+    }
+
+    .inquiry-navigation.m-2 {
+        margin: 0 !important;
+    }
+
+    .inquiry-navigation .mx-3 {
+        margin: 0 !important;
+    }
+
+    .tab-content .tab-pane .ms-5{
+        margin: 0 !important;
+    }
+
+    .tab-pane .row .form-control {
+        width: 85vw !important;
+    }
+
+    .tab-content .tagline-banner {
+        display: none !important;
+    }
+
+    .tab-pane button[type= 'submit'] {
+        font-size: 14px;
+    }
+
+    #franchise-inquiry img {
+        width: 50vw !important;
+    }
+
+    #career-inquiry .ms-5 {
+        margin: 0 !important;
+    }
+
+    #career-inquiry .form-control {
+        width: 90vw !important;
+    }
+
+    #career-inquiry .form-select {
+        width: 90vw !important;
+        font-size: 14px !important;
+    }
+
+    #career-inquiry .form-availability {
+        width: 90vw !important;
+    }
+
+    #career-inquiry #inputGroupFile04 {
+        font-size: 14px;
+    }
+}
+
