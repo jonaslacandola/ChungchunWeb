@@ -179,7 +179,15 @@ iframe {
         padding: 1.5em !important;
     }
 
+    .main-content {
+        font-size: 14px;
+    }
+
     /*Menu Styles*/
+    #menu-page {
+        font-size: 14px;
+    }
+    
     .menu-navigation {
         background-color: white;
     }
@@ -260,6 +268,31 @@ iframe {
 
     #career-inquiry #inputGroupFile04 {
         font-size: 14px;
+    }
+    
+    /*Catering Style*/
+    .row.catering-container {
+        display: flex;
+        justify-content: center;
+        font-size: 14px !important;
+    }
+    
+    .catering.p-5 {
+        padding: 1em !important;
+    }
+
+    .catering-container #form-control {
+        width: 100%;
+    }
+
+    #catering-description {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #chungchun-variations {
+        display: none;
     }
 }
 
